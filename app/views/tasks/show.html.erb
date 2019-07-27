@@ -1,18 +1,45 @@
-<%= link_to edit_task_path(@task.id), class: 'pull-right btn btn-default' do %>
-  <i class="far fa-pencil"></i> Edit this task
-<% end %>
+<div class="container">
+  <div class="wrapper">
+    <div class="container-title text-center">
+      <h1>Show Task</h1>
+      <hr>
+    </div>
+    <div class="show-task">
+      <h3><%= @task.title.capitalize %></h3>
+      <p><%= @task.details %></p>
+      <% if @task.completed %>
+        <i class="far fa-check-square"></i> This task is completed
+      <% else %>
+        <i class="far fa-square"></i> This task is not completed yet
+      <% end %>
+    </div>
+    <hr>
+    <div class="container-links">
+      <div class="index-link">
+        <%= link_to tasks_path do %>
+          <i class="fas fa-history"></i> Back to list
+        <% end %>
+      </div>
+      <div class="edit-link">
+        <%= link_to edit_task_path(@task.id) do %>
+          <i class="far fa-edit"></i> Edit this task
+        <% end %>
+      </div>
 
-<h1><%= @task.title %></h1>
+      <div class="delete-link">
+        <%= link_to task_path(@task), method: :delete, data: { confirm: "Delete #{@task.title}?"} do %>
+          <i class="far fa-trash-alt"></i> Delete this task
+        <% end %>
+      </div>
 
-<p class="well"><%= @task.details %></p>
+    </div>
+  </div>
+</div>
 
-<% if @task.completed %>
-  <i class="far fa-check-square"></i> This task is completed
-<% else %>
-  <i class="far fa-square"></i> This task is not completed yet
-<% end %>
 
-<hr>
-<%= link_to tasks_path do %>
-  <i class="far fa-history"></i> Back to list
-<% end %>
+
+
+
+
+
+

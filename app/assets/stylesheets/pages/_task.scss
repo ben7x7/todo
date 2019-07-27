@@ -1,0 +1,39 @@
+.body {
+  background-color: white !important;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.wrapper {
+  margin-top: 70px;
+  padding: 50px 40px;
+  background-color: #FCF5E8;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-link a {
+  color: black;
+}
+
+.delete-link a {
+  color: red;
+}
+
+.edit-link a {
+  color: #417505;
+}
+
+.new-link a {
+  color: #FB9E04;
+}

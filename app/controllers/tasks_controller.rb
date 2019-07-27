@@ -15,6 +15,9 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def show
+  end
+
   def edit
   end
 
@@ -23,10 +26,15 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def destroy
+    @task.destroy
+    redirect_to tasks_path
+  end
+
   private
 
   def set_task
-    @task = Task(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def task_params

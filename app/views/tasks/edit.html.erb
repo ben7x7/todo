@@ -1,8 +1,17 @@
-<h1>Edit task</h1>
+<div class="container">
+  <div class="wrapper">
+    <div class="container-title text-center">
+      <h1>Edit Task</h1>
+      <hr>
+    </div>
 
-<%= render 'form', task: @task %>
+    <%= render 'form', task: @task %>
+    <hr>
 
-<hr>
-<%= link_to tasks_path do %>
-  <i class="far fa-history"></i> Back to list
-<% end %>
+    <div class="container-links">
+      <%= link_to tasks_path do %>
+        <i class="fas fa-history"></i> Back to list
+      <% end %>
+    </div>
+  </div>
+</div>
