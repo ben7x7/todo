@@ -1,16 +1,14 @@
 .body {
-  background-color: white !important;
+  background-image: image-url('todo.jpg');
 }
 
-.container {
-  max-width: 600px;
-}
 
 .wrapper {
   margin-top: 70px;
   padding: 50px 40px;
   background-color: #FCF5E8;
   border-radius: 5px;
+  max-width: 600px;
 }
 
 ul {
@@ -36,4 +34,13 @@ ul {
 
 .new-link a {
   color: #FB9E04;
+}
+
+.container {
+
+}
+
+.container img {
+  width: 100%;
+  height: 100vh;
 }
